@@ -1,0 +1,322 @@
+/* ================================
+   RESET BÁSICO
+================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================
+   CONFIGURAÇÕES GERAIS
+================================ */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333333;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  color: #222222;
+  margin-bottom: 1rem;
+}
+
+/* ================================
+   LAYOUT PRINCIPAL
+================================ */
+main {
+  max-width: 860px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* ================================
+   HEADER / NAVEGAÇÃO
+================================ */
+.header {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #4f8ef7;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4f8ef7;
+}
+
+.header-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #666666;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: #e8f0fe;
+  color: #4f8ef7;
+}
+
+.nav-link.ativo {
+  background-color: #4f8ef7;
+  color: #ffffff;
+}
+
+/* ================================
+   FORMULÁRIO
+================================ */
+.habit-form {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.habit-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.habit-form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 0.4rem;
+}
+
+.habit-form input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.habit-form input:focus {
+  border-color: #4f8ef7;
+}
+
+.habit-form button {
+  grid-column: 1 / -1;
+  background-color: #4f8ef7;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.habit-form button:hover {
+  background-color: #3a7de8;
+}
+
+/* ================================
+   LISTA DE HÁBITOS
+================================ */
+ul {
+  list-style: none;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.habit-card {
+  background-color: #ffffff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  transition: box-shadow 0.2s;
+}
+
+.habit-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.habit-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.4rem;
+}
+
+.habit-card-acoes {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.8rem;
+  border-top: 1px solid #eeeeee;
+}
+
+.btn-detalhes {
+  color: #4f8ef7;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.btn-detalhes:hover {
+  text-decoration: underline;
+}
+
+.btn-remover-card {
+  background: none;
+  border: none;
+  color: #e05555;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.btn-remover-card:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   CARDS DE RESUMO (PÁGINA INÍCIO)
+================================ */
+.resumo {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.resumo-card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  text-align: center;
+}
+
+.resumo-card strong {
+  display: block;
+  font-size: 2.5rem;
+  color: #4f8ef7;
+  font-weight: 700;
+}
+
+.resumo-card span {
+  font-size: 0.85rem;
+  color: #888888;
+}
+
+/* ================================
+   BOTÃO PRIMÁRIO
+================================ */
+.btn-primario {
+  display: inline-block;
+  background-color: #4f8ef7;
+  color: #ffffff;
+  padding: 0.75rem 1.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+}
+
+.btn-primario:hover {
+  background-color: #3a7de8;
+}
+
+/* ================================
+   PÁGINA DE DETALHE
+================================ */
+.detalhe-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+}
+
+.detalhe-info {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding: 1.2rem 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.detalhe-info li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #555555;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.detalhe-info li:last-child {
+  border-bottom: none;
+}
+
+.detalhe-info li strong {
+  color: #333333;
+}
+
+.btn-voltar {
+  background: none;
+  border: none;
+  color: #888888;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.btn-voltar:hover {
+  color: #4f8ef7;
+}
+
+.btn-remover {
+  background-color: #fff0f0;
+  color: #e05555;
+  border: 1px solid #f5cccc;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-remover:hover {
+  background-color: #ffe0e0;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #aaaaaa;
+  font-size: 0.8rem;
+  margin-top: 3rem;
+  border-top: 1px solid #dddddd;
+}
